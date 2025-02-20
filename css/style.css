@@ -1,24 +1,4 @@
 @font-face {
-    font-family: Monor;
-    src: url("../fonts/Monor_Regular.otf");
-}
-
-@font-face {
-    font-family: Monor-Bold;
-    src: url("../fonts/monor-bold.otf");
-}
-
-@font-face {
-    font-family: Ribes;
-    src: url("../fonts/Ribes-Regular.otf");
-}
-
-@font-face {
-    font-family: Mazius;
-    src: url("../fonts/MaziusDisplay-Regular.otf");
-}
-
-@font-face {
     font-family: Necto;
     src: url("../fonts/necto-mono/NectoMono-Regular.woff2") format("woff2");
 }
