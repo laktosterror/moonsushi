@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: Mazius;
+    src: url("../fonts/MaziusDisplay-Regular.woff2") format("woff2");
+}
+
+@font-face {
     font-family: Aujournuit;
     src: url("../fonts/aujournuit/Aujournuit-Regular.woff2") format("woff2");
 }
