@@ -111,8 +111,9 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         rowElement.appendChild(cardElement);
 
-        document.querySelectorAll('.add-to-cart').forEach(button => {
-            button.addEventListener('click', addToCart);
-        });
+    });
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', addToCart);
     });
 });
