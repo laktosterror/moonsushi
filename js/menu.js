@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cardElement.innerHTML = `
             <div class="card menu-item w-100">
                 <h3>${item.title}</h3>
-                <img src="${item.image}" alt="${item.title}" class="img-fluid">
+                <img src="${item.image}" alt="${item.title}" class="img-fluid" loading="lazy">
                 <p>${item.description}</p>
                 <h4>${item.price} NOK</h4>
                 <spann>
