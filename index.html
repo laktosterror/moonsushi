@@ -22,23 +22,25 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar fixed-top">
-    <div class="container">
-        <!-- First Row: Brand Name -->
-        <div class="row w-100 mx-auto">
+<nav class="navbar fixed-top justify-content-center">
+    <div class="container w-100">
+        <div class="row mx-auto">
             <div class="text-center">
-                <a class="navbar-brand" href="#"><h1>Moon Sushi</h1></a>
+                <img class="logo md-" src="icons/moonsushi-logo.svg" alt="moonsushi-logo">
             </div>
         </div>
-        <!-- Second Row: Navigation Links -->
-        <div class="row navbar-expand-lg mx-auto">
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" href="index.html">Home</a>
-                    <a class="nav-link" href="menu.html">Menu</a>
-                    <a class="nav-link" href="about.html">About</a>
+        <div class="row w-100 mx-auto">
+            <div class="col-4 align-content-center">
+                <div id="weather-container"></div>
+            </div>
+            <div class="col-4 navbar-expand" id="navbarNavAltMarkup">
+                <div class="navbar-nav justify-content-center">
+                    <a class="nav-link link-light fw-bold" href="index.html">Home</a>
+                    <a class="nav-link link-light" href="menu.html">Menu</a>
+                    <a class="nav-link link-light" href="about.html">About</a>
                 </div>
             </div>
+            <div class="col-4"></div>
         </div>
     </div>
 </nav>
