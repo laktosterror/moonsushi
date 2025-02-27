@@ -123,7 +123,7 @@ async function fetchWeather() {
         return await response.json();
     }
     catch (error){
-        console.error(error);
+        console.error("Error fetching weather data:",error);
     }
 }
 
