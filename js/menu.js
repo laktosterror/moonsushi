@@ -85,25 +85,34 @@ function updateCartDisplay() {
 document.addEventListener("DOMContentLoaded", () => {
     const menuContainer = document.getElementById('menu-container');
 
-    let rowElement = null;
+    const rowElement = document.createElement('div');
+    rowElement.className = 'row';
+    menuContainer.appendChild(rowElement);
 
     menuItems.forEach((item, index) => {
-        if (index % 2 === 0) {
-            rowElement = document.createElement('div');
-            rowElement.className = 'row';
-            menuContainer.appendChild(rowElement);
-        }
-
         const cardElement = document.createElement('div');
-        cardElement.className = 'col';
+        cardElement.className = 'col-12 col-md-6';
         cardElement.innerHTML = `
-      <div class="card alt">
-        <h3>${item.title}</h3>
-        <img src="${item.image}" alt="${item.title}">
-        <p>${item.description}</p>
-      </div>
-    `;
+            <div class="card menu-item w-100">
+                <h3>${item.title}</h3>
+                <img src="${item.image}" alt="${item.title}" class="img-fluid">
+                <p>${item.description}</p>
+                <h4>${item.price} NOK</h4>
+                <spann>
+                    <button class="btn btn-outline-info" type="button" data-bs-toggle="collapse" data-bs-target="#moreInfo${index}" aria-expanded="false" aria-controls="moreInfo${index}">
+                        Read More
+                    </button>
+                    <button class="btn btn-secondary add-to-cart" data-index="${index}">Add to Cart</button>
+                </spann>
+                <div class="collapse" id="moreInfo${index}">
+                    <p class="moreInfo">${item.moreInfo}</p>
+                </div>
+            </div>
+        `;
         rowElement.appendChild(cardElement);
-    });
 
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', addToCart);
+        });
+    });
 });
