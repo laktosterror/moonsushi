@@ -43,6 +43,45 @@ const menuItems = [
     },
 ];
 
+let cart = [];
+
+let cartTotalPrice = 0;
+
+function addToCart(event) {
+    const index = event.target.getAttribute('data-index');
+    const item = menuItems[index];
+    cart.push(item);
+    console.log('Cart:', cart); // For debugging purposes
+    updateCartDisplay();
+}
+
+function clearCart(){
+    cart = [];
+    updateCartDisplay();
+}
+
+function updateCartDisplay() {
+    cartTotalPrice = 0;
+
+    const cartCounter =  document.getElementById('cart-counter');
+    cartCounter.innerHTML = cart.length.toString();
+
+    const cartContainer = document.getElementById('cart-container');
+    cartContainer.innerHTML = '';
+    cart.forEach(item => {
+        const cartItemElement = document.createElement('div');
+        cartItemElement.className = 'cart-item';
+        cartItemElement.innerHTML = `
+            <h4>${item.title} - ${item.price}:-</h4>
+        `;
+        cartContainer.appendChild(cartItemElement);
+        cartTotalPrice += item.price;
+    });
+
+    const cartTotalPriceDisplay = document.getElementById('totalPrice');
+    cartTotalPriceDisplay.innerHTML = cartTotalPrice;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const menuContainer = document.getElementById('menu-container');
 
