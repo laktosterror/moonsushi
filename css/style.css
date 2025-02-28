@@ -57,8 +57,7 @@ html,body {
 
 .card {
     animation: fadeIn 1s ease-out;
-    padding: 30px;
-    padding-top: 10px;
+    padding: 10px 30px 30px;
     border-radius: 10px;
     background: rgba(38, 38, 38, 1);
     box-shadow: rgba(50, 50, 93, 0) 0px 30px 50px -12px inset, rgba(0, 0, 0, 0.5) 0px 18px 26px -18px inset;
@@ -74,7 +73,7 @@ html,body {
 
 .weather-container {
     font-size: 10px;
-    font-family: Necto;
+    font-family: Necto, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -95,16 +94,13 @@ html,body {
     }
 }
 
-.restaurant-image {
+.longyearbyen-image {
+    margin-top: 20px;
     object-fit: fill;
     border-width: 10px;
     border-color: black;
     border-radius: 20px;
     overflow: hidden;
-}
-
-.cart-text {
-    font-family: Necto;
 }
 
 .map {
@@ -120,19 +116,19 @@ html,body {
     padding: 10px;
 }
 
-.cart-item {
-    border: 1px solid gray;
-    padding: 5px;
-    border-radius: 5px;
-}
-
 nav {
     font-family: Aujournuit, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 22px;
     background: rgba(31, 35, 53, 0.18);
     border-bottom: 1px solid rgba(97, 97, 97, 0.35);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(7.6px);
+    backdrop-filter: blur(8px);
+}
+
+.navbar-container {
+    max-width: 900px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 h1 {
