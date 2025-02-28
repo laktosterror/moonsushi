@@ -49,20 +49,20 @@ let cartTotalPrice = 0;
 
 
 function showToastNotification(message) {
-    const feedbackContainer = document.createElement('div');
-    feedbackContainer.className = 'd-flex justify-content-center align-items-center fixed-bottom m-2';
-    feedbackContainer.style.pointerEvents = 'none';
-    feedbackContainer.style.zIndex = 1000;
+    const toastContainer = document.createElement('div');
+    toastContainer.className = 'd-flex justify-content-center align-items-center fixed-bottom m-2';
+    toastContainer.style.pointerEvents = 'none';
+    toastContainer.style.zIndex = 1000;
 
-    const feedbackElement = document.createElement('div');
-    feedbackElement.className = 'feedback w-100 text-white fs-5';
-    feedbackElement.innerText = message;
+    const toastElement = document.createElement('div');
+    toastElement.className = 'feedback w-100 text-white fs-4';
+    toastElement.innerText = message;
 
-    feedbackContainer.appendChild(feedbackElement);
-    document.body.appendChild(feedbackContainer);
+    toastContainer.appendChild(toastElement);
+    document.body.appendChild(toastContainer);
 
     setTimeout(() => {
-        feedbackContainer.remove();
+        toastContainer.remove();
     }, 4000);
 }
 
