@@ -78,6 +78,8 @@ function addToCart(event) {
 function clearCart(){
     cart = [];
     updateCartDisplay();
+    const cartContainer = document.getElementById('cart-container');
+    cartContainer.innerHTML = '<h4>Cart empty!</h4>';
     showToastNotification("✕ Cleared cart");
 }
 
