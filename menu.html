@@ -39,20 +39,24 @@
                 </div>
             </div>
 
-            <div class="col-4 text-end align-content-center dropdown ms-auto">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span id="cart-counter">0</span> 🛒
-                </button>
-                <div class="dropdown-menu border-light-subtle bg-dark dropdown-card dropdown-menu-end w-100">
-                    <div id="cart-container">
-                        <p>Cart empty!</p>
+            <div class="col-4 text-end align-content-center dropdown">
+                    <button class="btn btn-outline-info" type="button" data-bs-toggle="collapse" data-bs-target="#cart" aria-expanded="false" aria-controls="cart">
+                        <span id="cart-counter">0</span> 🛒
+                    </button>
+            </div>
+        </div>
+        <div class="row mx-auto">
+            <div class="collapse" id="cart">
+                <div class="card">
+                    <div id="cart-container" class="text-end">
+                        <h4>Cart empty!</h4>
                         <!-- dynamic cart content here-->
                     </div>
-                    <div class="text-white">
-                        <h3>Total: <span id="totalPrice">0</span>:-</h3>
-                        <button class="btn btn-secondary">Checkout</button>
-                        <button class="btn btn-outline-info" onclick="clearCart()">Clear Cart</button>
-                    </div>
+                </div>
+                <div class="text-center">
+                    <h3>Total: <span id="totalPrice">0</span>:-</h3>
+                    <button class="btn btn-secondary">Checkout</button>
+                    <button class="btn btn-outline-info" onclick="clearCart()">Clear Cart</button>
                 </div>
             </div>
         </div>
