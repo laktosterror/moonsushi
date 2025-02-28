@@ -47,17 +47,38 @@ let cart = [];
 
 let cartTotalPrice = 0;
 
+
+function showToastNotification(message) {
+    const feedbackContainer = document.createElement('div');
+    feedbackContainer.className = 'd-flex justify-content-center align-items-center fixed-bottom m-2';
+    feedbackContainer.style.pointerEvents = 'none';
+    feedbackContainer.style.zIndex = 1000;
+
+    const feedbackElement = document.createElement('div');
+    feedbackElement.className = 'feedback w-100 text-white fs-5';
+    feedbackElement.innerText = message;
+
+    feedbackContainer.appendChild(feedbackElement);
+    document.body.appendChild(feedbackContainer);
+
+    setTimeout(() => {
+        feedbackContainer.remove();
+    }, 4000);
+}
+
+
 function addToCart(event) {
     const index = event.target.getAttribute('data-index');
     const item = menuItems[index];
     cart.push(item);
-    console.log('Cart:', cart); // For debugging purposes
     updateCartDisplay();
+    showToastNotification("✔ Added " + item.title + " to cart");
 }
 
 function clearCart(){
     cart = [];
     updateCartDisplay();
+    showToastNotification("✕ Cleared cart");
 }
 
 function updateCartDisplay() {

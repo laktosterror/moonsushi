@@ -157,3 +157,14 @@ p {
     font-weight: bold;
     color: white ;
 }
+
+.feedback {
+    font-family: Aujournuit, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background: rgba(31, 35, 53, 0.18);
+    border: 1px solid rgba(97, 97, 97, 0.35);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 1s ease-out;
+}
